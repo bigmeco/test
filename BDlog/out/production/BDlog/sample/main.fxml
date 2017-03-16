@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Accordion prefHeight="700.0" prefWidth="700.0">
+        <panes>
+          <TitledPane animated="false" text="PERSONAL">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="190.0" prefWidth="950.0">
+                     <children>
+                        <TableView layoutX="13.0" layoutY="14.0" prefHeight="567.0" prefWidth="673.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="ID" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                      <Button layoutX="508.0" layoutY="588.0" mnemonicParsing="false" text="Dobavit" />
+                        <Button layoutX="573.0" layoutY="588.0" mnemonicParsing="false" text="Ydalit" />
+                        <Button layoutX="624.0" layoutY="588.0" mnemonicParsing="false" text="Redaktir" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="TOVARI">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="190.0" prefWidth="950.0">
+                     <children>
+                        <TableView fx:id="tableUsers" layoutX="13.0" layoutY="14.0" prefHeight="567.0" prefWidth="673.0">
+                           <columns>
+                              <TableColumn fx:id="idT" prefWidth="99.0" text="ID" />
+                              <TableColumn fx:id="nameT" prefWidth="354.0" text="NAME" />
+                              <TableColumn fx:id="maneT" minWidth="0.0" prefWidth="219.0" text="MANY" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="508.0" layoutY="588.0" mnemonicParsing="false" text="Dobavit" />
+                        <Button layoutX="573.0" layoutY="588.0" mnemonicParsing="false" text="Ydalit" />
+                        <Button layoutX="624.0" layoutY="588.0" mnemonicParsing="false" text="Redaktir" />
+                     </children>
+                  </AnchorPane>
+               </content>
+          </TitledPane>
+          <TitledPane animated="false" text="POKYPATELI">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="190.0" prefWidth="950.0">
+                     <children>
+                        <TableView layoutX="13.0" layoutY="14.0" prefHeight="567.0" prefWidth="673.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="C1" />
+                              <TableColumn prefWidth="75.0" text="C2" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="508.0" layoutY="588.0" mnemonicParsing="false" text="Dobavit" />
+                        <Button layoutX="573.0" layoutY="588.0" mnemonicParsing="false" text="Ydalit" />
+                        <Button layoutX="624.0" layoutY="588.0" mnemonicParsing="false" text="Redaktir" />
+                     </children>
+                  </AnchorPane>
+               </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+   </children>
+</VBox>
