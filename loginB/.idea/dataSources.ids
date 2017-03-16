@@ -19,25 +19,50 @@
       <schema id="8" name="sys"/>
       <schema id="9" name="world"/>
       <table id="10" parent="1" name="users"/>
-      <column id="11" parent="10" name="id">
+      <table id="11" parent="1" name="tovar"/>
+      <column id="12" parent="10" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)|0</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="12" parent="10" name="name">
+      <column id="13" parent="10" name="name">
         <mandatory>1</mandatory>
         <data-type>varchar(45)|0</data-type>
       </column>
-      <column id="13" parent="10" name="age">
+      <column id="14" parent="10" name="age">
         <data-type>int(11)|0</data-type>
       </column>
-      <column id="14" parent="10" name="emeil">
+      <column id="15" parent="10" name="emeil">
         <mandatory>1</mandatory>
         <data-type>varchar(68)|0</data-type>
       </column>
-      <key id="15" parent="10" name="PRIMARY">
+      <key id="16" parent="10" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
+      </key>
+      <column id="17" parent="11" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="18" parent="11" name="name">
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="19" parent="11" name="mane">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <index id="20" parent="11" name="tovar_id_uindex">
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="21" parent="11" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="22" parent="11" name="tovar_id_uindex">
+        <columns>id</columns>
+        <underlying-index>tovar_id_uindex</underlying-index>
       </key>
     </database-model>
   </data-source>
