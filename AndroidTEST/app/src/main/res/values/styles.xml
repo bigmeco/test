@@ -7,5 +7,17 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="Container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+    <style name="Container.Dark">
+        <item name="android:orientation">vertical</item>
 
+    </style>
+    <style name="Container.BacG">
+        <item name="android:background">@drawable/fon</item>
+
+    </style>
 </resources>

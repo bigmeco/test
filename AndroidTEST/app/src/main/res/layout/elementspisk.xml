@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    style="@style/Container.Dark"
+    >
 
 <LinearLayout android:orientation="vertical"
     android:layout_height="wrap_content"
@@ -13,7 +13,8 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="название" />
+        android:text="название"
+        android:textSize="24sp" />
 </LinearLayout>
 
     <TextView
@@ -22,7 +23,8 @@
         android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:text="сумма" />
+        android:text="сумма"
+        android:textSize="18sp" />
 
 
 
