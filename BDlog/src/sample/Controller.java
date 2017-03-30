@@ -81,10 +81,10 @@ public class Controller {
                 tovar t;
 
                 while (res.next()){
-                   // t = new tovar(res.getInt("id"),res.getString("name"),res.getInt("mane"));
+                    t = new tovar(res.getInt("id"),res.getString("name"),res.getInt("mane"),res.getInt("Kolijestvo"));
 
                     //usersData.add(new tovar(res.getInt("id"),res.getString("name"),res.getInt("mane")));
-                   // System.out.println(usersData);
+                    System.out.println(t.getKolijestvo());
 
                 }
             }

@@ -16,18 +16,18 @@ import java.util.List;
  * Created by bigi on 28.03.2017.
  */
 
-public class ListAdapter extends ArrayAdapter<ListFail>{
+public class ListAdapter extends ArrayAdapter<ListFail> {
 
-    public ListAdapter( Context context,  List<ListFail> listFails) {
+    public ListAdapter(Context context, List<ListFail> listFails) {
         super(context, 0, listFails);
     }
 
 
     @Override
-    public View getView(int position,  View convertView,  ViewGroup parent) {
+    public View getView(int position, View convertView, ViewGroup parent) {
         ListFail listFail = getItem(position);
-        if(convertView == null){
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.elementspisk,parent,false);
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.elementspisk, parent, false);
         }
         TextView title = (TextView) convertView.findViewById(R.id.textView2);
         TextView sum = (TextView) convertView.findViewById(R.id.textView);

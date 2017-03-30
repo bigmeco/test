@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="TestSQLG" external.linked.project.path="$MODULE_DIR$/../../TestSQLG" external.root.project.path="$MODULE_DIR$/../../TestSQLG" external.system.id="GRADLE" external.system.module.group="TestSQLG" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../TestSQLG">
+      <excludeFolder url="file://$MODULE_DIR$/../../TestSQLG/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../TestSQLG/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
