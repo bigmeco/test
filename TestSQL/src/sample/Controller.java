@@ -20,7 +20,7 @@ public class Controller {
     private TextField vx2;
     String v1;
     String v2;
-
+    DBWor dbwor = new DBWor();
     public void GO(ActionEvent actionEvent) {
         v1 =vx1.getText();
         v2 =vx2.getText();
@@ -43,6 +43,7 @@ public class Controller {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
         }
     }
 }

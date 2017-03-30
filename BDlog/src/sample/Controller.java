@@ -52,52 +52,7 @@ public class Controller {
 //    }
 
 
-    public void SQLZ() {
-        Connection connection;
-        PreparedStatement preparedStatement = null;
-        try {
-            Driver driver = new FabricMySQLDriver();
-            DriverManager.registerDriver(driver);
 
-            connection = DriverManager.getConnection(URLk,login,pass);
-            if(!connection.isClosed()){
-                System.out.println("esti");
-                preparedStatement = connection.prepareStatement(VIVODtovar);
-//                preparedStatement.setInt(1,0);
-//                preparedStatement.setString(2,"egurt");
-//                preparedStatement.setInt(3,24);
-//                preparedStatement.execute();
-                Statement statement = connection.createStatement();
-//                statement.execute("insert into users (name, age, emeil)  values('asds',22,'dfdsfsgvc');");
-//                // int res =  statement.executeUpdate("update users set name='dd' where id=13;");
-////              ResultSet res =  statement.executeQuery("SELECT * FROM users");
-////                System.out.println(res.absolute(12));
-//                statement.addBatch("insert into users (name, age, emeil)  values('asdsss',12,'dfdsfsgvc');");
-//                statement.addBatch("insert into users (name, age, emeil)  values('asdsdfs',32,'dfdsfsgvc');");
-//                statement.addBatch("insert into users (name, age, emeil)  values('asdfs',22,'dfdsfsgvc');");
-//                statement.executeBatch();
-                // statement.clearBatch();
-                ResultSet res = preparedStatement.executeQuery();
-                tovar t;
-
-                while (res.next()){
-                    t = new tovar(res.getInt("id"),res.getString("name"),res.getInt("mane"),res.getInt("Kolijestvo"));
-
-                    //usersData.add(new tovar(res.getInt("id"),res.getString("name"),res.getInt("mane")));
-                    System.out.println(t.getKolijestvo());
-
-                }
-            }
-            connection.close();
-            if(connection.isClosed()){
-                System.out.println("ZAKRIL");
-
-            }
-        }catch (SQLException e){
-            System.err.println("nety draivera");
-        }
-
-    }
 
     public void GO(ActionEvent actionEvent) {
       v1 =vx1.getText();
@@ -111,7 +66,7 @@ if (v1.equals("1")&& v2.equals("1")){
     } catch (IOException e) {
         e.printStackTrace();
     }
-    SQLZ();
+
 
 } else {
     System.out.println("noo");

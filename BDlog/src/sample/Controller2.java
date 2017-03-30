@@ -1,11 +1,14 @@
 package sample;
 
+import com.mysql.fabric.jdbc.FabricMySQLDriver;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+
+import java.sql.*;
 
 public class Controller2 {
     private ObservableList<tovar> usersData = FXCollections.observableArrayList();
@@ -61,19 +64,17 @@ public class Controller2 {
 
     }
     private void initData() {
-        usersData.add(new tovar(0006,"тыква",700,21));
-        usersData.add(new tovar(0354,"сгущёнка",76,544));
-        usersData.add(new tovar(8318,"арбуз",150,13));
-        usersData.add(new tovar(6387,"ананас",240,35));
-        usersData.add(new tovar(4863,"сок",120,84));
-        usersData.add(new tovar(4866,"яблоко",56,35));
-        usersData.add(new tovar(0120,"творог",89,12));
-        usersData.add(new tovar(8387,"мясо",320,48));
+        tovar t = new tovar();
+       t = SQLZ();
 
 
 
-        //usersData.add(new tovar(res.getInt("id"),res.getString("name"),res.getInt("mane")));
+
+
     }
+
+
+
     private void initData2() {
 
 
@@ -83,5 +84,60 @@ public class Controller2 {
 
 
     }
+    public tovar SQLZ() {
+        Connection connection;
+        PreparedStatement preparedStatement = null;
+        try {
+            Driver driver = new FabricMySQLDriver();
+            DriverManager.registerDriver(driver);
 
+            connection = DriverManager.getConnection(URLk,login,pass);
+            if(!connection.isClosed()){
+                System.out.println("esti");
+                preparedStatement = connection.prepareStatement(VIVODtovar);
+                // System.out.println(preparedStatement);
+//                preparedStatement.setInt(1,0);
+//                preparedStatement.setString(2,"egurt");
+//                preparedStatement.setInt(3,24);
+//                preparedStatement.execute();
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery(VIVODtovar);
+//                statement.execute("insert into users (name, age, emeil)  values('asds',22,'dfdsfsgvc');");
+//                // int res =  statement.executeUpdate("update users set name='dd' where id=13;");
+////              ResultSet res =  statement.executeQuery("SELECT * FROM users");
+////                System.out.println(res.absolute(12));
+//                statement.addBatch("insert into users (name, age, emeil)  values('asdsss',12,'dfdsfsgvc');");
+//                statement.addBatch("insert into users (name, age, emeil)  values('asdsdfs',32,'dfdsfsgvc');");
+//                statement.addBatch("insert into users (name, age, emeil)  values('asdfs',22,'dfdsfsgvc');");
+//                statement.executeBatch();
+                // statement.clearBatch();
+                ResultSet res = preparedStatement.executeQuery();
+                // System.out.println(res.getInt("id"));
+
+
+
+                while (resultSet.next()){
+
+                    tovar t = new tovar();
+                    t.setId(resultSet.getInt(1));
+                    t.setName(resultSet.getString(2));
+                    t.setMane(resultSet.getInt(3));
+                    t.setKolijestvo(resultSet.getInt(4));
+                    usersData.add(t);
+
+
+                }
+            }
+            connection.close();
+            if(connection.isClosed()){
+                System.out.println("ZAKRIL");
+
+            }
+        }catch (SQLException e){
+            System.err.println("nety draivera");
+        }
+
+
+        return null;
+    }
 }

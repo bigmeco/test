@@ -9,7 +9,7 @@ import java.sql.SQLException;
  */
 
 public class DBWor {
-    private static final String URLk = "jdbc:mysql://localhost:3306/magazin?autoReconnect=true&useSSL=false" ;
+    private static final String URLk = "jdbc:mysql://localhost:3306/magaz" ;
     private static final String login = "root" ;
     private static final String pass = "root" ;
     private static final String DOBAVLENIE = "INSERT INTO tovar VALUES(?,?,?)" ;

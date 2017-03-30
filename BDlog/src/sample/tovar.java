@@ -9,6 +9,11 @@ public class tovar {
     private int mane ;
     private int Kolijestvo ;
 
+    public tovar() {
+
+    }
+
+
     public int getKolijestvo() {
         return Kolijestvo;
     }
