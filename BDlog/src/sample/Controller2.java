@@ -37,11 +37,11 @@ public class Controller2 {
     @FXML
     private TableColumn<ISTORIAZ, String> data;
 
-    private static final String URLk = "jdbc:mysql://localhost:3306/new_schema?autoReconnect=true&useSSL=false" ;
-    private static final String login = "root" ;
-    private static final String pass = "root" ;
-    private static final String DOBAVLENIE = "INSERT INTO tovar VALUES(?,?,?)" ;
-    private static final String VIVODtovar = "SELECT * FROM tovar" ;
+    private static final String URLk = "jdbc:mysql://localhost:3306/new_schema?autoReconnect=true&useSSL=false";
+    private static final String login = "root";
+    private static final String pass = "root";
+    private static final String DOBAVLENIE = "INSERT INTO tovar VALUES(?,?,?)";
+    private static final String VIVODtovar = "SELECT * FROM tovar";
 
     @FXML
     private void initialize() {
@@ -63,43 +63,35 @@ public class Controller2 {
         TB2.setItems(usersData2);
 
     }
+
     private void initData() {
-        tovar t = new tovar();
-       t = SQLZ();
-
-
-
+        SQLZ();
 
 
     }
-
 
 
     private void initData2() {
 
 
-        usersData2.add(new ISTORIAZ(1,6,0120,"21.12.2016"));
-        usersData2.add(new ISTORIAZ(2,8,6387,"1.1.2017"));
-        usersData2.add(new ISTORIAZ(3,12,8318,"20.03.2012"));
+        usersData2.add(new ISTORIAZ(1, 6, 0120, "21.12.2016"));
+        usersData2.add(new ISTORIAZ(2, 8, 6387, "1.1.2017"));
+        usersData2.add(new ISTORIAZ(3, 12, 8318, "20.03.2012"));
 
 
     }
-    public tovar SQLZ() {
+
+    public void SQLZ() {
         Connection connection;
         PreparedStatement preparedStatement = null;
         try {
             Driver driver = new FabricMySQLDriver();
             DriverManager.registerDriver(driver);
 
-            connection = DriverManager.getConnection(URLk,login,pass);
-            if(!connection.isClosed()){
+            connection = DriverManager.getConnection(URLk, login, pass);
+            if (!connection.isClosed()) {
                 System.out.println("esti");
-                preparedStatement = connection.prepareStatement(VIVODtovar);
-                // System.out.println(preparedStatement);
-//                preparedStatement.setInt(1,0);
-//                preparedStatement.setString(2,"egurt");
-//                preparedStatement.setInt(3,24);
-//                preparedStatement.execute();
+
                 Statement statement = connection.createStatement();
                 ResultSet resultSet = statement.executeQuery(VIVODtovar);
 //                statement.execute("insert into users (name, age, emeil)  values('asds',22,'dfdsfsgvc');");
@@ -111,12 +103,9 @@ public class Controller2 {
 //                statement.addBatch("insert into users (name, age, emeil)  values('asdfs',22,'dfdsfsgvc');");
 //                statement.executeBatch();
                 // statement.clearBatch();
-                ResultSet res = preparedStatement.executeQuery();
                 // System.out.println(res.getInt("id"));
 
-
-
-                while (resultSet.next()){
+                while (resultSet.next()) {
 
                     tovar t = new tovar();
                     t.setId(resultSet.getInt(1));
@@ -124,20 +113,16 @@ public class Controller2 {
                     t.setMane(resultSet.getInt(3));
                     t.setKolijestvo(resultSet.getInt(4));
                     usersData.add(t);
-
-
                 }
             }
             connection.close();
-            if(connection.isClosed()){
+            if (connection.isClosed()) {
                 System.out.println("ZAKRIL");
 
             }
-        }catch (SQLException e){
+        } catch (SQLException e) {
             System.err.println("nety draivera");
         }
 
-
-        return null;
     }
 }

@@ -4,10 +4,10 @@ package sample;
  * Created by bigi on 16.03.2017.
  */
 public class tovar {
-    private int id ;
-    private String name ;
-    private int mane ;
-    private int Kolijestvo ;
+    private int id;
+    private String name;
+    private int mane;
+    private int Kolijestvo;
 
     public tovar() {
 
