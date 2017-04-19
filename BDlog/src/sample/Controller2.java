@@ -74,9 +74,9 @@ public class Controller2 {
     private void initData2() {
 
 
-        usersData2.add(new ISTORIAZ(1, 6, 0120, "21.12.2016"));
-        usersData2.add(new ISTORIAZ(2, 8, 6387, "1.1.2017"));
-        usersData2.add(new ISTORIAZ(3, 12, 8318, "20.03.2012"));
+     //   usersData2.add(new ISTORIAZ(1, 6, 0120, "21.12.2016"));
+      //  usersData2.add(new ISTORIAZ(2, 8, 6387, "1.1.2017"));
+       // usersData2.add(new ISTORIAZ(3, 12, 8318, "20.03.2012"));
 
 
     }
