@@ -1,0 +1,1127 @@
+[
+    {
+        "outputFile": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/res/merged/debug/values-v21/values-v21.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 9,
+                    "endColumn": 16,
+                    "endOffset": 571
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/src/main/res/values-v21/styles.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 8,
+                        "startOffset": 60,
+                        "endLine": 10,
+                        "endColumn": 16,
+                        "endOffset": 576
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 576,
+                    "endColumn": 90,
+                    "endOffset": 662
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 667,
+                    "endColumn": 102,
+                    "endOffset": 765
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 770,
+                    "endColumn": 102,
+                    "endOffset": 868
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 873,
+                    "endColumn": 104,
+                    "endOffset": 973
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 978,
+                    "endColumn": 106,
+                    "endOffset": 1080
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1085,
+                    "endColumn": 108,
+                    "endOffset": 1189
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1194,
+                    "endColumn": 108,
+                    "endOffset": 1298
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1303,
+                    "endColumn": 108,
+                    "endOffset": 1407
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1412,
+                    "endColumn": 108,
+                    "endOffset": 1516
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1521,
+                    "endColumn": 108,
+                    "endOffset": 1625
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1630,
+                    "endColumn": 106,
+                    "endOffset": 1732
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1737,
+                    "endColumn": 102,
+                    "endOffset": 1835
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1840,
+                    "endColumn": 118,
+                    "endOffset": 1954
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1959,
+                    "endLine": 24,
+                    "endColumn": 12,
+                    "endOffset": 2109
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2114,
+                    "endLine": 26,
+                    "endColumn": 12,
+                    "endOffset": 2264
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 2269,
+                    "endColumn": 104,
+                    "endOffset": 2369
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 2374,
+                    "endColumn": 120,
+                    "endOffset": 2490
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 2495,
+                    "endColumn": 100,
+                    "endOffset": 2591
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 2596,
+                    "endLine": 31,
+                    "endColumn": 12,
+                    "endOffset": 2738
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 2743,
+                    "endLine": 33,
+                    "endColumn": 12,
+                    "endOffset": 2879
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 2884,
+                    "endColumn": 102,
+                    "endOffset": 2982
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 35,
+                    "startColumn": 4,
+                    "startOffset": 2987,
+                    "endColumn": 118,
+                    "endOffset": 3101
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 36,
+                    "startColumn": 4,
+                    "startOffset": 3106,
+                    "endColumn": 106,
+                    "endOffset": 3208
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 37,
+                    "startColumn": 4,
+                    "startOffset": 3213,
+                    "endColumn": 102,
+                    "endOffset": 3311
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 3316,
+                    "endLine": 39,
+                    "endColumn": 12,
+                    "endOffset": 3466
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 3471,
+                    "endLine": 41,
+                    "endColumn": 12,
+                    "endOffset": 3637
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 3642,
+                    "endLine": 43,
+                    "endColumn": 12,
+                    "endOffset": 3786
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 3791,
+                    "endLine": 45,
+                    "endColumn": 12,
+                    "endOffset": 3951
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 3956,
+                    "endLine": 47,
+                    "endColumn": 12,
+                    "endOffset": 4108
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 48,
+                    "startColumn": 4,
+                    "startOffset": 4113,
+                    "endLine": 49,
+                    "endColumn": 12,
+                    "endOffset": 4259
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 50,
+                    "startColumn": 4,
+                    "startOffset": 4264,
+                    "endColumn": 118,
+                    "endOffset": 4378
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 51,
+                    "startColumn": 4,
+                    "startOffset": 4383,
+                    "endLine": 55,
+                    "endColumn": 12,
+                    "endOffset": 4750
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 56,
+                    "startColumn": 4,
+                    "startOffset": 4755,
+                    "endLine": 57,
+                    "endColumn": 12,
+                    "endOffset": 4899
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 58,
+                    "startColumn": 4,
+                    "startOffset": 4904,
+                    "endLine": 59,
+                    "endColumn": 12,
+                    "endOffset": 5048
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 60,
+                    "startColumn": 4,
+                    "startOffset": 5053,
+                    "endColumn": 111,
+                    "endOffset": 5160
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 61,
+                    "startColumn": 4,
+                    "startOffset": 5165,
+                    "endColumn": 146,
+                    "endOffset": 5307
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 62,
+                    "startColumn": 4,
+                    "startOffset": 5312,
+                    "endLine": 63,
+                    "endColumn": 12,
+                    "endOffset": 5460
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 64,
+                    "startColumn": 4,
+                    "startOffset": 5465,
+                    "endLine": 65,
+                    "endColumn": 12,
+                    "endOffset": 5607
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 66,
+                    "startColumn": 4,
+                    "startOffset": 5612,
+                    "endColumn": 74,
+                    "endOffset": 5682
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 67,
+                    "startColumn": 4,
+                    "startOffset": 5687,
+                    "endColumn": 88,
+                    "endOffset": 5771
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 68,
+                    "startColumn": 4,
+                    "startOffset": 5776,
+                    "endColumn": 86,
+                    "endOffset": 5858
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 69,
+                    "startColumn": 4,
+                    "startOffset": 5863,
+                    "endColumn": 100,
+                    "endOffset": 5959
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 70,
+                    "startColumn": 4,
+                    "startOffset": 5964,
+                    "endColumn": 102,
+                    "endOffset": 6062
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 71,
+                    "startColumn": 4,
+                    "startOffset": 6067,
+                    "endLine": 114,
+                    "endColumn": 12,
+                    "endOffset": 9130
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 115,
+                    "startColumn": 4,
+                    "startOffset": 9135,
+                    "endLine": 117,
+                    "endColumn": 12,
+                    "endOffset": 9316
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 118,
+                    "startColumn": 4,
+                    "startOffset": 9321,
+                    "endLine": 161,
+                    "endColumn": 12,
+                    "endOffset": 12396
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 162,
+                    "startColumn": 4,
+                    "startOffset": 12401,
+                    "endLine": 164,
+                    "endColumn": 12,
+                    "endOffset": 12594
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 165,
+                    "startColumn": 4,
+                    "startOffset": 12599,
+                    "endLine": 167,
+                    "endColumn": 12,
+                    "endOffset": 12794
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 168,
+                    "startColumn": 4,
+                    "startOffset": 12799,
+                    "endLine": 169,
+                    "endColumn": 12,
+                    "endOffset": 12917
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 170,
+                    "startColumn": 4,
+                    "startOffset": 12922,
+                    "endLine": 171,
+                    "endColumn": 12,
+                    "endOffset": 13040
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 172,
+                    "startColumn": 4,
+                    "startOffset": 13045,
+                    "endLine": 173,
+                    "endColumn": 12,
+                    "endOffset": 13153
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 174,
+                    "startColumn": 4,
+                    "startOffset": 13158,
+                    "endLine": 176,
+                    "endColumn": 12,
+                    "endOffset": 13336
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 177,
+                    "startColumn": 4,
+                    "startOffset": 13341,
+                    "endLine": 178,
+                    "endColumn": 12,
+                    "endOffset": 13467
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 179,
+                    "startColumn": 4,
+                    "startOffset": 13472,
+                    "endLine": 181,
+                    "endColumn": 12,
+                    "endOffset": 13668
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 182,
+                    "startColumn": 4,
+                    "startOffset": 13673,
+                    "endColumn": 88,
+                    "endOffset": 13757
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 183,
+                    "startColumn": 4,
+                    "startOffset": 13762,
+                    "endColumn": 110,
+                    "endOffset": 13868
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 184,
+                    "startColumn": 4,
+                    "startOffset": 13873,
+                    "endLine": 186,
+                    "endColumn": 12,
+                    "endOffset": 14101
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 187,
+                    "startColumn": 4,
+                    "startOffset": 14106,
+                    "endColumn": 100,
+                    "endOffset": 14202
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 188,
+                    "startColumn": 4,
+                    "startOffset": 14207,
+                    "endColumn": 94,
+                    "endOffset": 14297
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 189,
+                    "startColumn": 4,
+                    "startOffset": 14302,
+                    "endColumn": 122,
+                    "endOffset": 14420
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 190,
+                    "startColumn": 4,
+                    "startOffset": 14425,
+                    "endColumn": 128,
+                    "endOffset": 14549
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 191,
+                    "startColumn": 4,
+                    "startOffset": 14554,
+                    "endColumn": 116,
+                    "endOffset": 14666
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 192,
+                    "startColumn": 4,
+                    "startOffset": 14671,
+                    "endLine": 194,
+                    "endColumn": 12,
+                    "endOffset": 14843
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 195,
+                    "startColumn": 4,
+                    "startOffset": 14848,
+                    "endColumn": 98,
+                    "endOffset": 14942
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 196,
+                    "startColumn": 4,
+                    "startOffset": 14947,
+                    "endLine": 197,
+                    "endColumn": 12,
+                    "endOffset": 15077
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 198,
+                    "startColumn": 4,
+                    "startOffset": 15082,
+                    "endLine": 199,
+                    "endColumn": 12,
+                    "endOffset": 15220
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 200,
+                    "startColumn": 4,
+                    "startOffset": 15225,
+                    "endLine": 201,
+                    "endColumn": 12,
+                    "endOffset": 15355
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 202,
+                    "startColumn": 4,
+                    "startOffset": 15360,
+                    "endLine": 203,
+                    "endColumn": 12,
+                    "endOffset": 15474
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 204,
+                    "startColumn": 4,
+                    "startOffset": 15479,
+                    "endLine": 207,
+                    "endColumn": 12,
+                    "endOffset": 15675
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 208,
+                    "startColumn": 4,
+                    "startOffset": 15680,
+                    "endLine": 209,
+                    "endColumn": 12,
+                    "endOffset": 15794
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 210,
+                    "startColumn": 4,
+                    "startOffset": 15799,
+                    "endColumn": 92,
+                    "endOffset": 15887
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 211,
+                    "startColumn": 4,
+                    "startOffset": 15892,
+                    "endColumn": 110,
+                    "endOffset": 15998
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 212,
+                    "startColumn": 4,
+                    "startOffset": 16003,
+                    "endColumn": 55,
+                    "endOffset": 16054
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 213,
+                    "startColumn": 4,
+                    "startOffset": 16059,
+                    "endLine": 214,
+                    "endColumn": 12,
+                    "endOffset": 16161
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 215,
+                    "startColumn": 4,
+                    "startOffset": 16166,
+                    "endLine": 218,
+                    "endColumn": 12,
+                    "endOffset": 16356
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 219,
+                    "startColumn": 4,
+                    "startOffset": 16361,
+                    "endLine": 220,
+                    "endColumn": 12,
+                    "endOffset": 16467
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 221,
+                    "startColumn": 4,
+                    "startOffset": 16472,
+                    "endLine": 222,
+                    "endColumn": 12,
+                    "endOffset": 16600
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 223,
+                    "startColumn": 4,
+                    "startOffset": 16605,
+                    "endColumn": 94,
+                    "endOffset": 16695
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 224,
+                    "startColumn": 4,
+                    "startOffset": 16700,
+                    "endColumn": 90,
+                    "endOffset": 16786
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 225,
+                    "startColumn": 4,
+                    "startOffset": 16791,
+                    "endColumn": 90,
+                    "endOffset": 16877
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 226,
+                    "startColumn": 4,
+                    "startOffset": 16882,
+                    "endColumn": 116,
+                    "endOffset": 16994
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 227,
+                    "startColumn": 4,
+                    "startOffset": 16999,
+                    "endLine": 228,
+                    "endColumn": 12,
+                    "endOffset": 17133
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 229,
+                    "startColumn": 4,
+                    "startOffset": 17138,
+                    "endLine": 238,
+                    "endColumn": 12,
+                    "endOffset": 17646
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 239,
+                    "startColumn": 4,
+                    "startOffset": 17651,
+                    "endLine": 248,
+                    "endColumn": 12,
+                    "endOffset": 18171
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 249,
+                    "startColumn": 4,
+                    "startOffset": 18176,
+                    "endLine": 258,
+                    "endColumn": 12,
+                    "endOffset": 18851
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 259,
+                    "startColumn": 4,
+                    "startOffset": 18856,
+                    "endColumn": 56,
+                    "endOffset": 18908
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 260,
+                    "startColumn": 4,
+                    "startOffset": 18913,
+                    "endColumn": 57,
+                    "endOffset": 18966
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 261,
+                    "startColumn": 4,
+                    "startOffset": 18971,
+                    "endLine": 263,
+                    "endColumn": 12,
+                    "endOffset": 19160
+                },
+                "from": {
+                    "file": "/Users/iMac/AndroidStudioProjects/test/app/build/intermediates/exploded-aar/com.android.support/design/24.0.0/res/values-v21/values-v21.xml"
+                }
+            }
+        ]
+    }
+]
