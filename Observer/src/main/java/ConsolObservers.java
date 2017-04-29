@@ -5,5 +5,6 @@ public class ConsolObservers implements Observer {
     @Override
     public void handleEvent(int t, int p) {
         System.out.println(t+"   iii   "+p);
+
     }
 }

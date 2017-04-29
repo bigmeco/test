@@ -7,8 +7,14 @@ import java.util.List;
 public class Realizacia implements Observerd {
     int t;
     int p;
+    List<String> strings = new ArrayList<>();
 
     List<Observer> observers = new ArrayList<>();
+
+    public void setStrings(String strings){
+        this.strings.add(strings);
+        notifyObserver();
+    }
 
     public void setReaz(int t,int p){
         this.t = t;

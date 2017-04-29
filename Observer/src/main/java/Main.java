@@ -7,5 +7,9 @@ public  static void main (String[] args){
 
     realizacia.addObserver(new ConsolObservers());
     realizacia.setReaz(21,56);
+    realizacia.setReaz(1,5346);
+    // не правельно
+    realizacia.setStrings("dfd");
+
 }
 }
