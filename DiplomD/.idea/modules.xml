@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DiplomD.iml" filepath="$PROJECT_DIR$/.idea/modules/DiplomD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DiplomD_main.iml" filepath="$PROJECT_DIR$/.idea/modules/DiplomD_main.iml" group="DiplomD" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DiplomD_test.iml" filepath="$PROJECT_DIR$/.idea/modules/DiplomD_test.iml" group="DiplomD" />
+    </modules>
+  </component>
+</project>
