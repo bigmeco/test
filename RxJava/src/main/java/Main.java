@@ -11,7 +11,7 @@ import static com.sun.activation.registries.LogSupport.log;
  */
 public class Main {
     public static void main(String[] args) {
-        longRX ();
+        map ();
     }
 
     public void strinRX (){
@@ -70,7 +70,7 @@ public class Main {
         observable.subscribe(observer);
     }
 
-    public static void longRX(){
+    public void longRX(){
         Observable<Long> observable = Observable.interval(500, TimeUnit.MILLISECONDS);
         Observer<Long> observer = new Observer<Long>() {
 
@@ -99,5 +99,52 @@ public class Main {
         };
         observable.subscribe(observer);
     }
+
+    public static void map(){
+        Observable<Integer> observable = Observable
+                .just("1", "2", "3", "4", "5", "6")
+                .map(S->Integer.parseInt(S));
+/*
+       Реализация одного и того же
+        .map(S->Integer.parseInt(S));
+        и
+Func1<String, Integer> stringToInteger = new Func1<String, Integer>() {
+    @Override
+    public Integer call(String s) {
+        return Integer.parseInt(s);
+    }
+};
+
+ */
+
+// create observer
+        Observer<Integer> observer = new Observer<Integer>() {
+
+            @Override
+            public void onError(Throwable e) {
+                System.out.println("onError: " + e);
+            }
+
+            @Override
+            public void onComplete() {
+                System.out.println("onCompleted");
+            }
+
+            @Override
+            public void onSubscribe(Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(Integer s) {
+                System.out.println("onNext: " + s);
+            }
+        };
+
+// subscribe
+        observable.subscribe(observer);
+
+    }
+
 
 }
