@@ -2,6 +2,7 @@ import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import static com.sun.activation.registries.LogSupport.log;
@@ -11,7 +12,7 @@ import static com.sun.activation.registries.LogSupport.log;
  */
 public class Main {
     public static void main(String[] args) {
-        map ();
+        buffer ();
     }
 
     public void strinRX (){
@@ -146,5 +147,31 @@ Func1<String, Integer> stringToInteger = new Func1<String, Integer>() {
 
     }
 
+    public static void  buffer (){
+        Observable<List<Integer>> observable = Observable
+                .just(1,2,3,4,5,6,7,8)
+                .buffer(3);
+        Observer<List<Integer>> observer = new Observer<List<Integer>>() {
+        @Override
+        public void onError(Throwable e) {
+            System.out.println("onError: " + e);
+        }
 
+        @Override
+        public void onComplete() {
+            System.out.println("onCompleted");
+        }
+
+        @Override
+        public void onSubscribe(Disposable d) {
+
+        }
+
+        @Override
+        public void onNext(List<Integer> s) {
+            System.out.println("onNext: " + s);
+        }
+    };
+        observable.subscribe(observer);
+    }
 }
