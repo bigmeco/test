@@ -12,7 +12,7 @@ import static com.sun.activation.registries.LogSupport.log;
  */
 public class Main {
     public static void main(String[] args) {
-        filter ();
+        takeUntil ();
     }
 
     public void strinRX (){
@@ -206,9 +206,70 @@ Func1<String, Integer> stringToInteger = new Func1<String, Integer>() {
         observable.subscribe(observer);
     }
 
+    public static void merge (){
+        Observable<Integer> observable = Observable
+                .just(1,2,3)
+                .mergeWith(Observable.just(4,5,6));
+                //.doOnNext(s-> System.out.println(s));
+        Observer<Integer> observer = new Observer<Integer>() {
+            @Override
+            public void onSubscribe(Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(Integer s) {
+                System.out.println("onNext: " + s);
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                System.out.println("onError: " + e);
+            }
+
+            @Override
+            public void onComplete() {
+                System.out.println("onCompleted");
+            }
 
 
+        };
+        observable.subscribe(observer);
 
+
+    }
+
+    public static void takeUntil (){
+        Observable<Integer> observable = Observable
+                .just(1,2,3,4,5,6,7,8)
+                .takeUntil(s->s==5);
+        Observer<Integer> observer = new Observer<Integer>() {
+
+
+            @Override
+            public void onSubscribe(Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(Integer integer) {
+                System.out.println("onNext: " + integer);
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                System.out.println("onError: " + e);
+            }
+
+            @Override
+            public void onComplete() {
+                System.out.println("onCompleted");
+
+            }
+        };
+        observable.subscribe(observer);
+    }
 
 
 }
