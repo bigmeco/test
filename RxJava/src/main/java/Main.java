@@ -12,7 +12,7 @@ import static com.sun.activation.registries.LogSupport.log;
  */
 public class Main {
     public static void main(String[] args) {
-        buffer ();
+        filter ();
     }
 
     public void strinRX (){
@@ -174,4 +174,41 @@ Func1<String, Integer> stringToInteger = new Func1<String, Integer>() {
     };
         observable.subscribe(observer);
     }
+
+    public static void  filter (){
+        Observable<String> observable = Observable
+                .just("15", "27", "34", "46", "52", "63")
+                .filter(s -> s.contains("5"));
+
+        Observer<String> observer = new Observer<String>() {
+            @Override
+            public void onSubscribe(Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(String s) {
+                System.out.println("onNext: " + s);
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                System.out.println("onError: " + e);
+            }
+
+            @Override
+            public void onComplete() {
+                System.out.println("onCompleted");
+            }
+
+
+        };
+        observable.subscribe(observer);
+    }
+
+
+
+
+
+
 }
