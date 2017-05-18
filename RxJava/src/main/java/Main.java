@@ -1,6 +1,11 @@
-import io.reactivex.Observable;
+
+
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Action;
+import org.reactivestreams.Subscriber;
+import rx.Observable;
+import rx.Subscriber;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -12,7 +17,7 @@ import static com.sun.activation.registries.LogSupport.log;
  */
 public class Main {
     public static void main(String[] args) {
-        takeUntil ();
+        Action ();
     }
 
     public void strinRX (){
@@ -31,6 +36,7 @@ public class Main {
             @Override
             public void onError(Throwable e) {
                 System.out.println("onError: " + e);
+
             }
 
             @Override
@@ -271,5 +277,54 @@ Func1<String, Integer> stringToInteger = new Func1<String, Integer>() {
         observable.subscribe(observer);
     }
 
+    public static void Action (){
+        // дич какаято получилась
+        Observable<String> observable = Observable.just("one", "two", "three");
+        Action action = () -> System.out.println("onNext: " );
+
+    }
+
+    public static void onSubscribe (){
+        Observable.OnSubscribe<Integer> onSubscribe = new Observable.OnSubscribe<Integer>() {
+            @Override
+            public void call(Subscriber<? super Integer> subscriber) {
+                for (int i = 0; i < 10; i++) {
+                    try {
+                        TimeUnit.SECONDS.sleep(1);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    subscriber.onNext(i);
+                }
+                subscriber.onCompleted();
+            }
+
+
+        };
+// create observable
+        Observable<Integer> observable = Observable.create(onSubscribe)
+                .subscribeOn(Schedulers.io());
+
+// create observer
+        Observer<Integer> observer = new Observer<Integer>() {
+            @Override
+            public void onCompleted() {
+                Log.d(TAG, "onCompleted");
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                Log.d(TAG, "onError: " + e);
+            }
+
+            @Override
+            public void onNext(Integer i) {
+                Log.d(TAG, "onNext: " + i);
+            }
+        };
+
+// subscribe
+        observable.subscribe(observer);
+    }
 
 }
