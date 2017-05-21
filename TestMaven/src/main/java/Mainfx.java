@@ -8,18 +8,18 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class Diplim extends Application {
+import java.io.IOException;
+
+public class Mainfx extends Application {
 
     public static void main(String[] args) {
         launch(args);
     }
 
-
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) throws IOException {
         AnchorPane root = FXMLLoader.load(getClass().getResource("control.fxml"));
         primaryStage.setResizable(false);
-
         primaryStage.setScene(new Scene(root, 300, 180));
         primaryStage.show();
     }
