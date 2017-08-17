@@ -1,0 +1,16 @@
+<root>
+	<thread name="Main" totalTimeMS="9.995702" startTime="813037313424" stopTime="813037347589" totalBlocks="16"> 
+		<block name="CGameEngine::SetGameMode" totalTimeMS="9.972297" startTime="813037313503" stopTime="813037347588" args=""> 
+			<block name="CAISystem::Reset" totalTimeMS="0.495323" startTime="813037334576" stopTime="813037336269" args=""> 
+				<block name="CSystem::LoadXmlFromFile" totalTimeMS="0.244590" startTime="813037335176" stopTime="813037336012" args="Scripts/AI/Factions.xml"> 
+					<block name="XmlParserImp::ParseFile" totalTimeMS="0.236105" startTime="813037335204" stopTime="813037336011" args=""> 
+					</block>
+				</block>
+			</block>
+			<block name="CCryAction::OnEditorSetGameMode" totalTimeMS="0.246053" startTime="813037341777" stopTime="813037342618" args=""> 
+				<block name="CActionGame::OnEditorSetGameMode" totalTimeMS="0.215040" startTime="813037341779" stopTime="813037342514" args=""> 
+				</block>
+			</block>
+		</block>
+	</thread>
+</root>
