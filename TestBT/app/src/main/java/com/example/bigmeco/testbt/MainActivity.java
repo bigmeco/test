@@ -7,6 +7,8 @@ import android.content.IntentFilter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.bluetooth.*;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.AbstractList;
@@ -15,8 +17,9 @@ import java.util.Set;
 
 
 public class MainActivity extends AppCompatActivity {
-
+    ListView listView;
     final static int REQUEST_ENABLE_BT = 1;
+    final static int CONEXAO = 2;
     String status;
     BluetoothAdapter bluetooth = BluetoothAdapter.getDefaultAdapter();
 
@@ -24,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         if (bluetooth != null) {
             if (bluetooth.isEnabled()) {
@@ -33,7 +37,17 @@ public class MainActivity extends AppCompatActivity {
 //                status= mydevicename+" : "+ mydeviceaddress;
                 String state= String.valueOf(bluetooth.getState());
                 status= mydevicename+ " ;  "+ mydeviceaddress+" : "+ state;
+                Set<BluetoothDevice> pairedDevices = bluetooth.getBondedDevices();
 
+                if (pairedDevices.size() > 0) {
+                    // There are paired devices. Get the name and address of each paired device.
+                    for (BluetoothDevice device : pairedDevices) {
+                        String  deviceName = device.getName();
+                        String deviceHardwareAddress = device.getAddress(); // MAC address
+                        System.out.println(deviceName+"  !!!!!!!!!!!!!!!!!!!!!!!!");
+
+                    }
+                }
 
             } else {
                 // Bluetooth выключен. Предложим пользователю включить его.
@@ -41,36 +55,55 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
             }
         }
-        Toast.makeText(this, status, Toast.LENGTH_LONG).show();
+       // Toast.makeText(this, status, Toast.LENGTH_LONG).show();
+            registerReceiver(discoveryMonitor, new IntentFilter(dStarted));
     }
-
+    String dStarted = BluetoothAdapter.ACTION_DISCOVERY_STARTED;
+    String dFinished = BluetoothAdapter.ACTION_DISCOVERY_FINISHED;
+    BroadcastReceiver discoveryMonitor;
     @Override
     protected void onStart() {
         super.onStart();
-       // Toast.makeText(this, status, Toast.LENGTH_LONG).show();
-  
+//        Intent List = new Intent(MainActivity.this,Main2Activity.class);
+//        startActivityForResult(List,CONEXAO);
+
+        String aDiscoverable = BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE;
+        startActivityForResult(new Intent(aDiscoverable),
+                0);
+         discoveryMonitor = new BroadcastReceiver() {
+
+
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                if (dStarted.equals(intent.getAction())) {
+                    // Процесс обнаружения начался.
+                    Toast.makeText(getApplicationContext(),
+                            "Discovery Started...", Toast.LENGTH_SHORT).show();
+                }
+                else if (dFinished.equals(intent.getAction())) {
+                    // Процесс обнаружения завершился.
+                    Toast.makeText(getApplicationContext(),
+                            "Discovery Completed...", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+        };
+
+
+
     }
 
-    private final BroadcastReceiver mReceiver=new BroadcastReceiver(){
-        public void onReceive(Context context, Intent intent){
-            String action= intent.getAction();
-// Когда найдено новое устройство
-            if(BluetoothDevice.ACTION_FOUND.equals(action)){
-// Получаем объект BluetoothDevice из интента
-                BluetoothDevice device= intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
-//Добавляем имя и адрес в array adapter, чтобы показвать в ListView
-                AbstractList<String> mArrayAdapter = null;
-                mArrayAdapter.add(device.getName()+"\n"+ device.getAddress());
-            }
-        }
-    };
+
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
+
+
         // Регистрируем BroadcastReceiver
-        IntentFilter filter=new IntentFilter(BluetoothDevice.ACTION_FOUND);
-        registerReceiver(mReceiver, filter);// Не забудьте снять регистрацию в onDestroy
+       IntentFilter filter=new IntentFilter(BluetoothDevice.ACTION_FOUND);
+        registerReceiver(discoveryMonitor, new IntentFilter(dFinished));
+//        registerReceiver(mReceiver, filter);// Не забудьте снять регистрацию в onDestroy
 
     }
 
