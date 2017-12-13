@@ -75,10 +75,11 @@ public class MainActivity extends AppCompatActivity {
         subscription = device.establishConnection(true)
                 .observeOn(AndroidSchedulers.mainThread())
 // <-- autoConnect flag
-                //.flatMap(rxBleConnection -> rxBleConnection.readCharacteristic(UUID.fromString("0000fff7-0000-1000-8000-00805f9b34fb")))
+                .flatMap(rxBleConnection -> rxBleConnection.readCharacteristic(UUID.fromString("0000fff8-0000-1000-8000-00805f9b34fb")))
                 .subscribe(
-                        characteristicValue -> {
-                            txtcon.setText(characteristicValue.toString()  );
+                            bytes -> {
+                                txtcon.setText(HexString.bytesToHex(bytes));
+
                         },
                         throwable -> {
                             // Handle an error here.
