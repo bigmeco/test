@@ -1,19 +1,18 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
+ * Created by bigi on 24.01.2018.
  */
+
 
 import React, {Component} from "react";
 import Realm from "realm";
 import {Alert, StyleSheet} from "react-native";
-import {Button, Container, Content, Drawer, Footer, FooterTab, Text, ActionSheet, View, Root} from "native-base";
+import {
+    Button, Container, Content, Drawer, Footer, FooterTab, Text, ActionSheet, View, Root, List,
+    Card, CardItem, Body
+} from "native-base";
 
-import AppHeader from './AppHeader';
 
-
-import Sidebar from './sidebar';
-export default class App extends Component<{}> {
+export default class HomeScreen extends Component<{}> {
     constructor(props) {
         super(props);
         this.state = {realm: null};
@@ -46,28 +45,26 @@ export default class App extends Component<{}> {
         });
     }
 
-    closeDrawer = () => {
-        this.drawer._root.close()
-    };
-    openDrawer = () => {
-        this.drawer._root.open()
-    };
+
     render() {
+        let items = ['Simon Mignolet','Nathaniel Clyne','Dejan Lovren','Mama Sakho','Emre Can'];
+
         return (
-            <Root>
-            <Container>
-                <Drawer
-                    ref={(ref) => { this.drawer = ref; }}
-                    content={<Sidebar/>}
-                    onClose={() => this.closeDrawer()} >
-
-                    <AppHeader
-                        openDrawer={this.openDrawer.bind(this)}
-                    />
-                </Drawer>
-
-        </Container>
-            </Root>
+                <Container>
+                    <List dataArray={items}
+                          renderRow={(item) =>
+                              <Card>
+                                  <CardItem>
+                                      <Body>
+                                      <Text>
+                                          {items}
+                                      </Text>
+                                      </Body>
+                                  </CardItem>
+                              </Card>
+                          }>
+                    </List>
+                </Container>
         );
     }
 }
