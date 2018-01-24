@@ -56,7 +56,7 @@ class DrawerContent extends React.Component {
                     </Body>
 
                 </ListItem>
-                <ListItem icon  onPress={Actions.home}>
+                <ListItem icon  onPress={Actions.index}>
                     <Left>
                         <Icon name="plane" />
                     </Left>

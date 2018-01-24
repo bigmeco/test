@@ -5,17 +5,21 @@
 
 import React, {Component} from "react";
 import Realm from "realm";
-import {Alert, StyleSheet} from "react-native";
+import {Alert, StyleSheet, NativeModules, NativeEventEmitter, WebView} from "react-native";
 import {
     Button, Container, Content, Drawer, Footer, FooterTab, Text, ActionSheet, View, Root, List,
     Card, CardItem, Body
 } from "native-base";
-
+const {TestManager} = NativeModules;
+const testManagerEmitter = new NativeEventEmitter(TestManager);
 
 export default class HomeScreen extends Component<{}> {
     constructor(props) {
         super(props);
-        this.state = {realm: null};
+        this.state = {realm: null,
+            isLoading: true,
+            port: 0
+        };
 
     }
 
@@ -33,6 +37,23 @@ export default class HomeScreen extends Component<{}> {
         });
     }
 
+    componentDidMount() {
+        const subscription = testManagerEmitter.addListener(
+            'EventReminder',
+            (reminder) => {
+                console.log(reminder.name)
+
+                this.setState({
+                    isLoading: false,
+                    port: reminder.name
+                }, function () {
+                    // do something with new state
+                });
+            }
+        );
+        TestManager.addEvent('Test Event', 'Test Data');
+    }
+
     componentWillMountq() {
         Realm.open({
             schema: [{name: 'Dog', properties: {name: 'string'}}]
@@ -48,7 +69,7 @@ export default class HomeScreen extends Component<{}> {
 
     render() {
         let items = ['Simon Mignolet','Nathaniel Clyne','Dejan Lovren','Mama Sakho','Emre Can'];
-
+        let url = 'http://localhost:' + this.state.port + '/ssapi/zb';
         return (
                 <Container>
                     <List dataArray={items}
@@ -57,8 +78,13 @@ export default class HomeScreen extends Component<{}> {
                                   <CardItem>
                                       <Body>
                                       <Text>
-                                          {items}
+                                          {	url
+                                          }
                                       </Text>
+                                      <WebView
+                                          source={{uri: url}}
+                                          style={{marginTop: 20}}
+                                      />
                                       </Body>
                                   </CardItem>
                               </Card>
