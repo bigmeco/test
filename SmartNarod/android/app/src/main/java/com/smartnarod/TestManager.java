@@ -26,6 +26,9 @@ import com.nabto.api.*;
 public class TestManager extends ReactContextBaseJavaModule  {
 
 
+    private static final String DURATION_SHORT_KEY = "SHORT";
+    private static final String DURATION_LONG_KEY = "LONG";
+
     public ReactApplicationContext rectcontext;
 
     Thread tunnelThread = null;
@@ -52,11 +55,9 @@ public class TestManager extends ReactContextBaseJavaModule  {
     public void addEvent(String message1, String message2) {
         //Toast.makeText(getReactApplicationContext(), message, duration).show();
         Log.d(message1, message2);
-        Log.d("dddddd dddddddddddd d    dddddddddddddddddddddd");
         //this.testEventReminderReceived("8080");
         this.nabtoTunnelTest();
     }
-
 
     private void sendEvent(ReactContext reactContext,
                            String eventName,
@@ -76,7 +77,7 @@ public class TestManager extends ReactContextBaseJavaModule  {
 
     @ReactMethod
     private void nabtoTunnelTest() {
-            final NabtoApi api = new NabtoApi(new NabtoAndroidAssetManager(this.rectcontext));
+        final NabtoApi api = new NabtoApi(new NabtoAndroidAssetManager(this.rectcontext));
 
         // Start Nabto
         api.startup();
@@ -84,7 +85,7 @@ public class TestManager extends ReactContextBaseJavaModule  {
 // Login as guest
         Session session = api.openSession("guest", "");
         if(session.getStatus() == NabtoStatus.OK) {
-            int localPort = 81;
+            int localPort = 0;
             String nabtoHost = "0200000100005b7c-1d39a6ab858f26d77610.nabto.squid.link";
             String remoteHost = "localhost";
             int remotePort = 80;
@@ -164,7 +165,7 @@ public class TestManager extends ReactContextBaseJavaModule  {
 // Stop Nabto
         //api.closeSession(session);
         //api.shutdown();
-    //}
+        //}
     }
 
 

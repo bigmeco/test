@@ -23,19 +23,19 @@ export default class HomeScreen extends Component<{}> {
 
     }
 
-
-    componentWillMount() {
-        Realm.open({
-            schema: [{name: 'Dog', properties: {name: 'string'}}]
-        }).then(realm => {
-            realm.write(() => {
-                realm.create('Dog', {name: 'Rex'});
-            });
-            this.setState({realm});
-            realm.addListener('change', updateUI);
-
-        });
-    }
+	//
+    // componentWillMount() {
+    //     Realm.open({
+    //         schema: [{name: 'Dog', properties: {name: 'string'}}]
+    //     }).then(realm => {
+    //         realm.write(() => {
+    //             realm.create('Dog', {name: 'Rex'});
+    //         });
+    //         this.setState({realm});
+    //         realm.addListener('change', updateUI);
+	//
+    //     });
+    // }
 
     componentDidMount() {
         const subscription = testManagerEmitter.addListener(
@@ -54,18 +54,6 @@ export default class HomeScreen extends Component<{}> {
         TestManager.addEvent('Test Event', 'Test Data');
     }
 
-    componentWillMountq() {
-        Realm.open({
-            schema: [{name: 'Dog', properties: {name: 'string'}}]
-        }).then(realm => {
-            realm.write(() => {
-                realm.create('Dog', {name: 'Rex'});
-            });
-            realm.addListener('change', updateUI);
-
-        });
-    }
-
 
     render() {
         let items = ['Simon Mignolet','Nathaniel Clyne','Dejan Lovren','Mama Sakho','Emre Can'];
@@ -78,6 +66,9 @@ export default class HomeScreen extends Component<{}> {
                                   <CardItem>
                                       <Body>
                                       <Text>
+										  {	url
+										  }
+                                      </Text>  <Text>
                                           {	url
                                           }
                                       </Text>
