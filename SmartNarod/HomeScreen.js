@@ -5,23 +5,13 @@
  */
 import React, {Component} from 'react';
 import {ActivityIndicator, AppRegistry, NativeEventEmitter, NativeModules, View, WebView} from 'react-native';
-import Realm from "realm";
+import realm from './RealmModels';
 import {Text} from "native-base";
 
 const {TestManager} = NativeModules;
 const testManagerEmitter = new NativeEventEmitter(TestManager);
 
-class URL {}
-URL.schema = {
-	name: 'URL',
-	primaryKey: 'id',
-	properties: {
-		id: 'int',
-		url: 'string'
-	}
 
-};
-const realm = new Realm({schema: [URL]});
 export default class DeviseScreen extends Component<{}> {
     constructor(props) {
         super(props);
@@ -39,11 +29,11 @@ export default class DeviseScreen extends Component<{}> {
             (reminder) => {
                 console.log(reminder.name)
 				try {
-
 					realm.write(() => {
 						realm.create('URL',  {id: 0, url:reminder.name },true);
 					});
 				} catch (error) {
+
 				}
                 this.setState({
                     isLoading: false,
@@ -65,11 +55,12 @@ export default class DeviseScreen extends Component<{}> {
             );
         }
 
-        var url = 'http://localhost:' + realm.objects('URL')[0].url + '/ssapi/zb';
+        let url = 'http://localhost:' + realm.objects('URL')[0].url + '/ssapi/zb';
+        let url2 = 'http://localhost:' + this.state.port + '/ssapi/zb';
         return (
             <View style={{flex: 1, paddingTop: 20}}>
                 <Text>
-					{	url +'     i    '+url2
+					{	url +'   +    '+ url2
 					}
                 </Text>
                 <WebView
