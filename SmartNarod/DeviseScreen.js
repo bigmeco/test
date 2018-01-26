@@ -5,7 +5,7 @@
 
 import React, {Component} from "react";
 import realm from './RealmModels';
-import {fetch, NativeEventEmitter, NativeModules, StyleSheet, WebView} from "react-native";
+import { NativeEventEmitter, NativeModules, StyleSheet, WebView} from "react-native";
 import {
 	ActionSheet,
 	Body,
@@ -37,19 +37,6 @@ export default class HomeScreen extends Component<{}> {
 
 	}
 
-	//
-	// componentWillMount() {
-	//     Realm.open({
-	//         schema: [{name: 'Dog', properties: {name: 'string'}}]
-	//     }).then(realm => {
-	//         realm.write(() => {
-	//             realm.create('Dog', {name: 'Rex'});
-	//         });
-	//         this.setState({realm});
-	//         realm.addListener('change', updateUI);
-	//
-	//     });
-	// }
 
 	// componentDidMount() {
 	// 	const subscription = testManagerEmitter.addListener(
@@ -70,21 +57,17 @@ export default class HomeScreen extends Component<{}> {
 
 
 	render() {
-		let url = 'http://localhost:' + realm.objects('URL')[0].url + '/ssapi/zb';
+		let url = 'http://localhost:' + realm.objects('URL')[0].url + '/ssapi/zb/dev';
+		let tr;
+getMoviesFromApiAsync(url);
 
 		let items = ['Simon Mignolet', 'Nathaniel Clyne'];
 		return (
 			<Container>
 				<Text>
-					{/*{fetch(url)*/}
-						{/*.then((response) => response.json())*/}
-						{/*.then((responseJson) => {*/}
-							{/*return responseJson.movies;*/}
-						{/*})*/}
-						{/*.catch((error) => {*/}
-							{/*console.error(error);*/}
-						{/*})*/}
-					{/*}*/}
+					{
+
+					}
 				</Text>
 				<Text>
 					{url}
@@ -107,7 +90,34 @@ export default class HomeScreen extends Component<{}> {
 	}
 }
 
+function getMoviesFromApiAsync(url) {
+	return fetch(url)
+		.then((response) => response.json())
+		.then((responseJson) => {
+			parseArray(	responseJson);
 
+			return responseJson;
+		})
+		.catch((error) => {
+			console.error(error);
+		});
+}
+
+function parseArray(arr) {
+	let newArr = [];
+	for (let i = 0; i < arr.length; i++) {
+		if (!Array.isArray(arr[i])) {
+			newArr.push(arr[i]);
+		}
+		if (Array.isArray(arr[i])) {
+			newArr = newArr.concat(parseArray(arr[i]));
+		}
+	}
+	
+
+
+	return newArr;
+}
 
 const styles = StyleSheet.create({
 	container: {
