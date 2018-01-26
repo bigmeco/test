@@ -22,7 +22,7 @@ ZigBeeDevices.schema = {
 		idD: 'int',
 		name: 'string',
 		online: 'bool',
-		templateHash: 'string'
+		templateHash: 'string?'
 	}
 
 };

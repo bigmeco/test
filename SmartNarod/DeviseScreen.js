@@ -61,14 +61,10 @@ export default class HomeScreen extends Component<{}> {
 		let tr;
 getMoviesFromApiAsync(url);
 
-		let items = ['Simon Mignolet', 'Nathaniel Clyne'];
+		let items = realm.objects('ZigBeeDevices');
 		return (
 			<Container>
-				<Text>
-					{
 
-					}
-				</Text>
 				<Text>
 					{url}
 				</Text>
@@ -78,7 +74,12 @@ getMoviesFromApiAsync(url);
 							  <CardItem>
 								  <Body>
 
-
+								  <Text>
+									  {
+										  item.name + '  ' +
+										  '  ' + item.templateHash
+									  }
+								  </Text>
 
 								  </Body>
 							  </CardItem>
@@ -94,6 +95,8 @@ function getMoviesFromApiAsync(url) {
 	return fetch(url)
 		.then((response) => response.json())
 		.then((responseJson) => {
+			console.log(responseJson);
+
 			parseArray(	responseJson);
 
 			return responseJson;
@@ -106,14 +109,34 @@ function getMoviesFromApiAsync(url) {
 function parseArray(arr) {
 	let newArr = [];
 	for (let i = 0; i < arr.length; i++) {
-		if (!Array.isArray(arr[i])) {
-			newArr.push(arr[i]);
-		}
-		if (Array.isArray(arr[i])) {
-			newArr = newArr.concat(parseArray(arr[i]));
-		}
+		if(arr[i]===undefined) {}
+			try {
+				realm.write(() => {
+					realm.create('ZigBeeDevices', {
+						id: i ,
+						defaultName: arr[i].defaultName,
+						discovered: arr[i].discovered,
+						eui: arr[i].eui,
+						idD: arr[i].id,
+						name: arr[i].name,
+						online: arr[i].online,
+						templateHash: arr[i].templateHash
+					}, true);
+				});
+			} catch (error) {
+				console.error(error);
+			}
+
+		console.log(realm.objects('ZigBeeDevices')[i])
 	}
-	
+
+	function notNull(param) {
+		if(param===undefined){
+			return 'undefined';
+		}
+		return param;
+	}
+
 
 
 	return newArr;
