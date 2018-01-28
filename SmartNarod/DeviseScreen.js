@@ -74,7 +74,7 @@ getMoviesFromApiAsync(url);
 							  <CardItem>
 								  <Body>
 
-								  <Text>
+								  <Text
 									  {
 										  item.name + '  ' +
 										  '  ' + item.templateHash
