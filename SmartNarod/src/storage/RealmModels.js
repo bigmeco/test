@@ -1,6 +1,9 @@
 import Realm from 'realm';
 
-class URL {}
+
+class URL {
+}
+
 URL.schema = {
 	name: 'URL',
 	primaryKey: 'id',
@@ -8,26 +11,28 @@ URL.schema = {
 		id: 'int',
 		url: 'string'
 	}
-
 };
-class ZigBeeDevices {}
+
+class ZigBeeDevices {
+}
+
 ZigBeeDevices.schema = {
 	name: 'ZigBeeDevices',
 	primaryKey: 'id',
 	properties: {
-		id: 'int',
 		defaultName: 'string',
 		discovered: 'bool',
 		eui: 'string',
-		idD: 'int',
+		id: 'int',
 		name: 'string',
 		online: 'bool',
 		templateHash: 'string?'
 	}
-
 };
 
-export default new Realm({ schema: [
-	URL,
-	ZigBeeDevices
-] });
+export default new Realm({
+	schema: [
+		URL,
+		ZigBeeDevices
+	]
+});

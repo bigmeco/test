@@ -3,27 +3,16 @@ package com.smartnarod;
 
 import android.support.annotation.Nullable;
 import android.util.Log;
-
-import com.facebook.react.bridge.Arguments;
-import com.facebook.react.bridge.NativeModule;
-import com.facebook.react.bridge.ReactApplicationContext;
-import com.facebook.react.bridge.ReactContext;
-import com.facebook.react.bridge.ReactContextBaseJavaModule;
-import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.WritableMap;
+import com.facebook.react.bridge.*;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.HashMap;
-
 import com.nabto.api.*;
+
+import java.util.HashMap;
+import java.util.Map;
 
 //import static com.facebook.react.bridge.UiThreadUtil.runOnUiThread;
 
-public class TestManager extends ReactContextBaseJavaModule  {
+public class NabtoManager extends ReactContextBaseJavaModule {
 
 
     private static final String DURATION_SHORT_KEY = "SHORT";
@@ -33,21 +22,19 @@ public class TestManager extends ReactContextBaseJavaModule  {
 
     Thread tunnelThread = null;
 
-    public TestManager(ReactApplicationContext reactContext) {
+    public NabtoManager(ReactApplicationContext reactContext) {
         super(reactContext);
         this.rectcontext = reactContext;
     }
 
     @Override
     public String getName() {
-        return "TestManager";
+        return "NabtoManager";
     }
 
     @Override
     public Map<String, Object> getConstants() {
         final Map<String, Object> constants = new HashMap<>();
-        //constants.put(DURATION_SHORT_KEY, Toast.LENGTH_SHORT);
-        //constants.put(DURATION_LONG_KEY, Toast.LENGTH_LONG);
         return constants;
     }
 
@@ -55,8 +42,8 @@ public class TestManager extends ReactContextBaseJavaModule  {
     public void addEvent(String message1, String message2) {
         //Toast.makeText(getReactApplicationContext(), message, duration).show();
         Log.d(message1, message2);
-        //this.testEventReminderReceived("8080");
-        this.nabtoTunnelTest();
+        //this.eventReminderReceived("8080");
+        this.nabtoTunnel();
     }
 
     private void sendEvent(ReactContext reactContext,
@@ -68,15 +55,14 @@ public class TestManager extends ReactContextBaseJavaModule  {
     }
 
 
-
-    public void testEventReminderReceived(String port) {
+    public void eventReminderReceived(String port) {
         WritableMap params = Arguments.createMap();
-        params.putString("name", port);
+        params.putString("port", port);
         sendEvent(this.rectcontext, "EventReminder", params);
     }
 
     @ReactMethod
-    private void nabtoTunnelTest() {
+    private void nabtoTunnel() {
         final NabtoApi api = new NabtoApi(new NabtoAndroidAssetManager(this.rectcontext));
 
         // Start Nabto
@@ -84,14 +70,14 @@ public class TestManager extends ReactContextBaseJavaModule  {
 
 // Login as guest
         Session session = api.openSession("guest", "");
-        if(session.getStatus() == NabtoStatus.OK) {
+        if (session.getStatus() == NabtoStatus.OK) {
             int localPort = 0;
             String nabtoHost = "0200000100005b7c-1d39a6ab858f26d77610.nabto.squid.link";
             String remoteHost = "localhost";
             int remotePort = 80;
 
             final Tunnel tunnel = api.tunnelOpenTcp(localPort, nabtoHost, remoteHost, remotePort, session);
-            if(tunnel.getStatus() == NabtoStatus.OK) {
+            if (tunnel.getStatus() == NabtoStatus.OK) {
                 Log.d(this.getClass().getSimpleName(),
                         "TCP tunnel opened with status: " + tunnel.getStatus());
 
@@ -102,11 +88,11 @@ public class TestManager extends ReactContextBaseJavaModule  {
                             NabtoTunnelState newState;
                             NabtoTunnelState state = NabtoTunnelState.CLOSED;
                             boolean keepRunning = true;
-                            while(keepRunning) {
+                            while (keepRunning) {
                                 sleep(100);
                                 //handler.post(this);
                                 final TunnelInfoResult info = api.tunnelInfo(tunnel);
-                                if(info.getStatus() != NabtoStatus.OK) {
+                                if (info.getStatus() != NabtoStatus.OK) {
                                     Log.d(this.getClass().getSimpleName(),
                                             "Failed to get tunnel info: " + info.getStatus());
                                 } else {
@@ -136,7 +122,7 @@ public class TestManager extends ReactContextBaseJavaModule  {
                                                         Log.d(this.getClass().getSimpleName(),
                                                                 "Tunnel connected, tunnel version: " + info.getVersion() + " local port: " + info.getPort());
                                                         String stringPort = String.valueOf(info.getPort());
-                                                        testEventReminderReceived(stringPort);
+                                                        eventReminderReceived(stringPort);
                                                         stopThread();
                                                     }
                                                 });
@@ -162,12 +148,8 @@ public class TestManager extends ReactContextBaseJavaModule  {
 
         }
 
-// Stop Nabto
-        //api.closeSession(session);
-        //api.shutdown();
-        //}
-    }
 
+    }
 
 
     public void stopThread() {

@@ -4,7 +4,6 @@
 
 
 import React, {Component} from "react";
-import realm from './RealmModels';
 import {ActivityIndicator} from "react-native";
 import {
 	ActionSheet,
@@ -22,34 +21,30 @@ import {
 	Text,
 	View
 } from "native-base";
-import {getMoviesFromApiAsync} from "./RestModels";
-import {getObject} from "./LocalStorage";
+import {LocalStorage} from "../storage/LocalStorage";
+import {ControlStation} from "../station/ControlStation";
 
 
-let set;
-export default class HomeScreen extends Component<{}> {
+export default class DeviceScreen extends Component<{}> {
 	constructor(props) {
 		super(props);
 		this.state = {
 			realm: null,
 			isLoading: true,
-			port: 0,
-			rediploi: 0
+			port: 0
 		};
-
-	}
-
-
-	componentWillMount() {
-		set = this;
 	}
 
 	render() {
-		let url = 'http://localhost:' + realm.objects('URL')[0].url + '/ssapi/zb/dev';
-		let items = getObject('ZigBeeDevices');
+		let items = LocalStorage.getZigBeeDevices();
 
 		if (this.state.isLoading) {
-			getMoviesFromApiAsync(url, set);
+			ControlStation.refreshZigBeeDevices(() => {
+				this.setState({
+					isLoading: false,
+				}, function () {
+				});
+			});
 			return (
 				<Container style={{flex: 1, paddingTop: 20}}>
 					<ActivityIndicator/>
@@ -58,23 +53,20 @@ export default class HomeScreen extends Component<{}> {
 		}
 		return (
 			<Container>
-
-				<Text>
-					{url}
-				</Text>
 				<List dataArray={items}
 					  renderRow={(item) =>
 						  <Card>
 							  <CardItem>
 								  <Body>
-
 								  <Text>
-									  {
-										  item.name + '  ' +
-										  '  ' + item.templateHash
-									  }
+									  {'Имя: ' + item.name}
 								  </Text>
-
+								  <Text>
+									  {item.eui}
+								  </Text>
+								  <Text>
+									  {'Онлайн: ' + item.online.toString()}
+								  </Text>
 								  </Body>
 							  </CardItem>
 						  </Card>
