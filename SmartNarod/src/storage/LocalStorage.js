@@ -51,6 +51,7 @@ export class LocalStorage {
 			}
 		});
 	}
+	
 
 	static upsertZigBeeDevices(devices, callback) {
 		return new Promise((resolve, reject) => {
