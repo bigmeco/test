@@ -5,7 +5,7 @@
      
 // впишите сюда данные, соответствующие вашей сети:
 const char* ssid = "SF2";
-const char* password = "9214336478";
+const char* password = "92143364**";
 
 ESP8266WebServer server(80);
 MDNSResponder mdns;
