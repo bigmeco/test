@@ -2,7 +2,8 @@
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
 #include <ESP8266mDNS.h>
-     
+     #include <ArduinoJson.h>
+
 // впишите сюда данные, соответствующие вашей сети:
 const char* ssid = "SF2";
 const char* password = "9214336478";
@@ -13,7 +14,8 @@ MDNSResponder mdns;
 String webPage = "";
      
 int led_pin = 13;
-     
+     int led_pin3 = 3;
+
 void setup(void){
      
   // подготовка:
@@ -23,10 +25,13 @@ void setup(void){
   while (!Serial) {
     ; // wait for serial port to connect. Needed for native USB port only
   }
+
+
+
   
   // информация о контроллере
   Serial.println("");
-  Serial.println("Test kolay:");
+  Serial.println("Test kolay1:");
   Serial.print("\tChip ID: ");
   Serial.println(ESP.getFlashChipId());
   Serial.print("\tCore Version: ");
@@ -94,7 +99,29 @@ void setup(void){
   server.on("/", [](){
     server.send(200, "text/html", webPage);
   });
+  server.on("/json", [](){
+
+    String webPageJson;
   
+  // Allocate JsonBuffer
+  // Use arduinojson.org/assistant to compute the capacity.
+  StaticJsonBuffer<500> jsonBuffer;
+ 
+  // Create the root object
+  JsonObject& root = jsonBuffer.createObject();
+ int  f =analogRead(A0);
+  root["ADC"] = f; //Put Sensor value
+  root["KEY"] = digitalRead(0); //Reads Flash Button Status
+ 
+  root.printTo(webPageJson);  //Store JSON in String variable
+  server.send(200, "text/html", webPageJson);
+      digitalWrite(led_pin3, HIGH);
+      
+Serial.println("[json]");
+Serial.println("[" + String(f)  + "]");
+    delay(1000);
+    });
+
   server.on("/LedON", [](){
     server.send(200, "text/html", webPage);
     digitalWrite(led_pin, HIGH);

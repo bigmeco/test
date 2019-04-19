@@ -1,31 +1,31 @@
 #include <MemoryFree.h>
 #include <EEPROM.h>
 #include <Servo.h> 
+
 #define PIN_LED 13    // вывод светодиода
-String inString;
-// Пин для сервопривода
+#define PIN_LED_JSON 3    // вывод светодиода
 int servoPin = 3;
-// Создаем объект
+
+String inString;
+
 Servo Servo1;
+
 // Настройка
 void setup() {
   // Инициализация портов и выходов
   Serial.begin(115200);
   Serial3.begin(115200);
   pinMode(PIN_LED, OUTPUT);
+    pinMode(PIN_LED_JSON, OUTPUT);
+
   digitalWrite(PIN_LED, LOW);
-    Servo1.attach(servoPin);
+    digitalWrite(PIN_LED_JSON, LOW);
+      Servo1.attach(servoPin);
+
 }
 
-
-
-
-
-
-
-
-void loop(){
-
+// Выполнение
+void loop() {
 }
 
 // Проверка события на порту Serial3
@@ -40,31 +40,26 @@ void serialEvent3() {
     if (inChar == ']') {
       if (inString.indexOf("[ON]")>0) {
         digitalWrite(PIN_LED, HIGH);
-          delay(1000);
-          Servo1.write(45);
-                    delay(1000);
-
- Servo1.write(85);
-           delay(1000);
-
- Servo1.write(5);
-           delay(1000);
-
-  Servo1.write(45);
-            delay(1000);
-
-          Servo1.write(0);
-        digitalWrite(PIN_LED, LOW);
-
       }
       else if (inString.indexOf("[OFF]")>0) {
         digitalWrite(PIN_LED, LOW);
-          Servo1.write(180);
+      }
+       else if (inString.indexOf("[json]")>0) {
 
+                         // Servo1.write(a);
+                                  Serial.println(inString+"  test");
       }
       else
       {
-        Serial.println("Wrong command");
+        String T1=inString.substring(inString.indexOf("[")+1,inString.indexOf("]")); 
+                  delay(1000); 
+
+                  Servo1.write(T1.toInt()*3); 
+                                                    Serial.println(String(T1.toInt())+"  test");
+   
+                  delay(1000); 
+
+
       }
       inString = "";
     }
