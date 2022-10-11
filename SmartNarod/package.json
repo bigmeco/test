@@ -9,7 +9,7 @@
   "dependencies": {
     "native-base": "^2.3.7",
     "react": "16.2.0",
-    "react-native": "0.52.0",
+    "react-native": "0.70.2",
     "react-native-database": "^0.3.1",
     "react-native-router-flux": "^4.0.0-beta.28",
     "realm": "^2.2.3",
